@@ -3,6 +3,7 @@ let myForm = document.querySelector(".contact");
 let myCross = document.querySelector(".cross");
 
 
+
 contact.addEventListener('click', showContactForm);
 myCross.addEventListener('click', hideContactForm);
 
@@ -12,4 +13,5 @@ function showContactForm(e){
 
 function hideContactForm(e){
     myForm.classList.remove('active');
+    navLinksContainer.classList.remove('open')
 }
