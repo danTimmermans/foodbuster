@@ -8,25 +8,25 @@ let yLastPosition;
 // let largeur = sectionWidth.offsetWidth
 // console.log(largeur);
 window.addEventListener('scroll', ()=>{
-    if(window.scrollY > 2100){
-        cardOne.classList.add('slideinright')
-    }
-    if(window.scrollY > 1500){
-        cardOne.classList.add('slideinright')
-    }
-    yLastPosition = window.scrollY;
-})
-window.addEventListener('scroll', ()=>{
     if(window.scrollY > 2200){
-        cardTwo.classList.add('slideinleft')
+        cardOne.classList.add('slideinright')
     }
-    if(window.scrollY > 1600){
-        cardTwo.classList.add('slideinleft')
-    }
+    // if(window.scrollY > 1500){
+    //     cardOne.classList.add('slideinright')
+    // }
     yLastPosition = window.scrollY;
 })
 window.addEventListener('scroll', ()=>{
     if(window.scrollY > 2300){
+        cardTwo.classList.add('slideinleft')
+    }
+    // if(window.scrollY > 1600){
+    //     cardTwo.classList.add('slideinleft')
+    // }
+    yLastPosition = window.scrollY;
+})
+window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 2400){
         cardThree.classList.add('slideinright')
     }
     if(window.scrollY > 1700){
