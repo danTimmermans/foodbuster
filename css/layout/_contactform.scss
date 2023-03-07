@@ -26,6 +26,9 @@
             background-color: color("light_green");
             border: 1px solid color("dark_green");
             margin-top: 1em;
+            &::placeholder{
+                color: color("dark_green");
+            }
         }
         .name{
             @include display-grid();
