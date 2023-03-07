@@ -14,4 +14,5 @@ function showContactForm(e){
 function hideContactForm(e){
     myForm.classList.remove('active');
     navLinksContainer.classList.remove('open')
+    burgerToggler.classList.remove('open')
 }
