@@ -11,6 +11,7 @@
         @include padding();
         @include display-grid();
         grid-template-columns: 1fr 40px;
+        align-items: center;
         h2{
             @include reset();
             color: color("dark_green");
