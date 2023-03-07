@@ -1,0 +1,78 @@
+.contact{
+    @include mytrans(1s);
+    @include fixed(top);
+    right: -200vw;
+    background:color("medium_green");
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    z-index: 20000;
+    .hello{
+        @include padding();
+        @include display-grid();
+        grid-template-columns: 1fr 40px;
+        h2{
+            @include reset();
+            color: color("dark_green");
+        }
+    }
+    .form{
+        @include padding();
+        input, textarea{
+            width: 100%;
+            @include padding("all", 1em);
+            color: color("dark_green");
+            background-color: color("light_green");
+            border: 1px solid color("dark_green");
+            margin-top: 1em;
+        }
+        .name{
+            @include display-grid();
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
+        }
+    }
+    .submit{
+        @include padding();
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+    button{
+        @include padding("all", 1em);
+        color: color("dark_green");
+        background-color: color("light_green");
+        border: 1px solid color("dark_green");
+        cursor: pointer;
+    }
+}
+.contact.active{
+    right:0;
+
+}
+// responsive
+@include media-breakpoint-up("md"){
+    .contact{
+        width: 50%;
+    }
+}
+.cross{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.cross::before, .cross::after{
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 4px;
+    background:color("dark_green");;
+    top: 16px;
+}
+.cross::before{
+    transform: rotate(45deg);
+}
+.cross::after{
+    transform: rotate(-45deg);
+}
