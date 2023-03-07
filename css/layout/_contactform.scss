@@ -1,7 +1,7 @@
 .contact{
     @include mytrans(1s);
     @include fixed(top);
-    right: -200vw;
+    // right: -200vw;
     background:color("medium_green");
     display: flex;
     flex-direction: column;
@@ -36,7 +36,9 @@
         @include padding();
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 1em;
+        padding-top: 0;
     }
     button{
         @include padding("all", 1em);
@@ -44,6 +46,9 @@
         background-color: color("light_green");
         border: 1px solid color("dark_green");
         cursor: pointer;
+    }
+    a{
+        width: 200px;
     }
 }
 .contact.active{
