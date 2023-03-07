@@ -1,6 +1,6 @@
 #mainHeader{
     width: 100%;
-    // height: 60vh;
+    height: auto;
     background: rgb(67,94,97);
     background: radial-gradient(circle, rgba(67,94,97,1) 0%, rgba(213,224,189,1) 0%, rgba(151,175,166,1) 100%);
     display: flex;
@@ -52,7 +52,6 @@
 }
 @include media-breakpoint-up("md"){
     #mainHeader{
-        height: auto;
         .logo_container{
             height: 650px;
         }
@@ -60,7 +59,6 @@
 }
 @include media-breakpoint-up("lg"){
     #mainHeader{
-        height: 90vh;
         .logo{
             width: 90%;
         }
@@ -71,7 +69,6 @@
 }
 @include media-breakpoint-up("xl"){
     #mainHeader{
-        height: 100vh;
         .logo{
             width: 70%;
         }
@@ -167,3 +164,113 @@ section{
         }
     }
 }
+#enzymes{
+    .card_section{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        .card{
+            opacity: 0;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0 10px 0;
+            padding: 0 10px 0 10px;
+            background-color: color('light_green');
+            border-radius: 20px;
+            box-shadow: 0px 10px 10px 0px color('dark_green');
+            height: 450px;       
+            h3{
+                text-align: center;
+            }
+            &:nth-child(2){
+                background-color: color('medium_green');
+            }
+            .picContainer{
+                width: 50px;
+            }
+        }
+        .slideinleft{
+            animation-duration: 3s;
+            animation-fill-mode: both;
+            animation-name: slideinleft;
+            @keyframes slideinleft {
+                from {
+                    opacity: 0;
+                    margin-right: 100%;
+                }
+                
+                to {
+                    opacity: 1;
+                    margin-right: 0%;
+                }
+            }   
+        }
+        .slideinright{
+            animation-duration: 3s;
+            animation-fill-mode: both;
+            animation-name: slideinright; 
+            @keyframes slideinright {
+                from {
+                    opacity: 0;
+                    margin-left: 100%;
+                }
+                
+                to {
+                    opacity: 1;
+                    margin-left: 0%;
+                }
+            } 
+        }
+
+        @include media-breakpoint-up("md"){
+            .card{
+                width: 100%;
+                height: 450px;
+                .picContainer{
+                    width: 80px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up("lg"){
+        .card_section{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            .card{
+                height: 550px;
+
+            }
+        }
+    }
+}
+// .flex-row{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     gap: 20px;
+//     .card{
+//         opacity: 1;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         margin: 10px 0 10px 0;
+//         padding: 0 10px 0 10px;
+//         background-color: color('light_green');
+//         border-radius: 20px;
+//         box-shadow: 0px 10px 10px 0px color('dark_green');
+//         height: 450px;       
+//         h3{
+//             text-align: center;
+//         }
+//         &:nth-child(2){
+//             background-color: color('medium_green');
+//         }
+//         .picContainer{
+//             width: 50px;
+//         }
+//     }
+// }
