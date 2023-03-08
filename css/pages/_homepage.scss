@@ -164,17 +164,6 @@ section{
         }
     }
 }
-// #binCollection{
-//     @include media-breakpoint-up("md"){
-//         height: 800px;
-// }
-//     @include media-breakpoint-up("lg"){
-//     height: 800px;
-//     article{
-//         height: 500px;
-//     }
-// }
-// }
 #enzymes{
     .card_section{
         display: flex;
@@ -274,6 +263,7 @@ section{
         position: relative;
         z-index: 10000;
         background-color: rgba(248,247,247,.2);
+        width: 100%;
         p, a{
 
             color: color('black');
@@ -283,6 +273,7 @@ section{
         a{
             text-decoration: none;
             font-style: italic;
+            font-size: font-size("lg");
         }
     }
 
