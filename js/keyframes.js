@@ -18,7 +18,7 @@ window.addEventListener('scroll', ()=>{
     yLastPosition = window.scrollY;
 })
 window.addEventListener('scroll', ()=>{
-    if(window.scrollY > 2300){
+    if(window.scrollY > 2500 && largeur < 768){
         cardTwo.classList.add('slideinleft')
     }
     if(window.scrollY > 1600 && largeur < 992){
@@ -30,14 +30,14 @@ window.addEventListener('scroll', ()=>{
     yLastPosition = window.scrollY;
 })
 window.addEventListener('scroll', ()=>{
-    if(window.scrollY > 2400){
-        cardThree.classList.add('slideinright')
+    if(window.scrollY > 2700 && largeur < 768){
+        cardThree.classList.add('slideinrighttwo')
     }
     if(window.scrollY > 1700 && largeur < 992){
-        cardThree.classList.add('slideinright')
+        cardThree.classList.add('slideinrighttwo')
     }
     if(window.scrollY > 1500 && largeur > 992){
-        cardThree.classList.add('slideinright')
+        cardThree.classList.add('slideinrighttwo')
     }
     yLastPosition = window.scrollY;
 })
