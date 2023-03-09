@@ -1,0 +1,204 @@
+#analytics{
+    background: #313131;
+    h2, p{
+        color: color('white');
+    }
+    .jauge{
+        background: #313131;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        width: 100%;
+    }
+    .pie{
+        display: block;
+        position: relative;
+        height: var(--size);
+        width: var(--size);
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 0 0 1px rgba(255,255,255,.5);
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(0,0,0,.5);
+            left: -1px;
+            top: -1px;
+            border-radius: 50%;
+            box-shadow: 0 0 4px (255,255,255,.1),
+            0 0 15px rgba(0,0,0,.2),
+            0 0 8px rgba(0,0,0,1) inset,
+            0 0 8px rgba(0,0,0,.5)inset;
+        }
+        svg{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            transform: rotate(-90deg);
+            circle{
+                stroke: #67a505;
+                stroke-width: 39.7%;
+                stroke-dasharray: var(--dasharray-size),var(--dasharray-max);
+                transition: all .2s linear;
+            }
+        }
+        .nb{
+            background: linear-gradient(180deg, #fff 0%, #999 100%);
+            color: #111;
+            height: var(--nb-size);
+            width: var(--nb-size);
+            position: absolute;
+            top: var(--alignement);
+            left: var(--alignement);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0.9), 0 0 15px rgba(255,255,255,.8) inset;
+            font-size: calc(var(--size)* .2);
+            font-weight: bold;
+            line-height: calc(var(--size)/ 1.5);
+            text-shadow: 0 2px 0 rgba(255,255,255,.8);
+            transition: all .2s linear;
+            &::after{
+                content:var(--nb-percent-str);
+            }
+        }
+    }
+    .pie-2{
+        display: block;
+        position: relative;
+        height: var(--size);
+        width: var(--size);
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 0 0 1px rgba(255,255,255,.5);
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(0,0,0,.5);
+            left: -1px;
+            top: -1px;
+            border-radius: 50%;
+            box-shadow: 0 0 4px (255,255,255,.1),
+            0 0 15px rgba(0,0,0,.2),
+            0 0 8px rgba(0,0,0,1) inset,
+            0 0 8px rgba(0,0,0,.5)inset;
+        }
+        svg{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            transform: rotate(-90deg);
+            circle{
+                stroke: #67a505;
+                stroke-width: 39.7%;
+                stroke-dasharray: var(--dasharray-size-2),var(--dasharray-max);
+                transition: all .2s linear;
+            }
+        }
+        .nb{
+            background: linear-gradient(180deg, #fff 0%, #999 100%);
+            color: #111;
+            height: var(--nb-size);
+            width: var(--nb-size);
+            position: absolute;
+            top: var(--alignement);
+            left: var(--alignement);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0.9), 0 0 15px rgba(255,255,255,.8) inset;
+            font-size: calc(var(--size)* .2);
+            font-weight: bold;
+            line-height: calc(var(--size)/ 1.5);
+            text-shadow: 0 2px 0 rgba(255,255,255,.8);
+            transition: all .2s linear;
+            &::after{
+                content:var(--nb-percent-str-2);
+            }
+        }
+    }
+    .pie-3{
+        display: block;
+        position: relative;
+        height: var(--size);
+        width: var(--size);
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 0 0 1px rgba(255,255,255,.5);
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(0,0,0,.5);
+            left: -1px;
+            top: -1px;
+            border-radius: 50%;
+            box-shadow: 0 0 4px (255,255,255,.1),
+            0 0 15px rgba(0,0,0,.2),
+            0 0 8px rgba(0,0,0,1) inset,
+            0 0 8px rgba(0,0,0,.5)inset;
+        }
+        svg{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            transform: rotate(-90deg);
+            circle{
+                stroke: #67a505;
+                stroke-width: 39.7%;
+                stroke-dasharray: var(--dasharray-size-3),var(--dasharray-max);
+                transition: all .2s linear;
+            }
+        }
+        .nb{
+            background: linear-gradient(180deg, #fff 0%, #999 100%);
+            color: #111;
+            height: var(--nb-size);
+            width: var(--nb-size);
+            position: absolute;
+            top: var(--alignement);
+            left: var(--alignement);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0.9), 0 0 15px rgba(255,255,255,.8) inset;
+            font-size: calc(var(--size)* .2);
+            font-weight: bold;
+            line-height: calc(var(--size)/ 1.5);
+            text-shadow: 0 2px 0 rgba(255,255,255,.8);
+            transition: all .2s linear;
+            &::after{
+                content:var(--nb-percent-str-3);
+            }
+        }
+    }
+    .jauge-container{
+        background: #313131;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid #fff;
+        margin: 20px 0 20px 0;
+        h3{
+            color: color('white');
+        }
+    }
+    .jaugeDescription{
+        background: #313131;
+        padding: 0 20px 0 20px;
+        p{
+            color: color('white');
+            text-align: center;
+        }
+    }
+}

@@ -65,3 +65,27 @@ $breakpoints : (
     "xl": 1200px,
     "xxl": 1400px
 );
+// variables jauges
+:root {
+    // dimensions jauge
+    --size:200px;
+    // pi
+    --pi:3.14159265358979;
+    // rayon cercle dans svg
+    --circle-r:30%;
+    // % de remplisage de la jauge sans unité
+    --nb-percent:0;
+    --nb-percent-str:'0%';
+    --nb-percent-2:0;
+    --nb-percent-str-2:'0%';
+    --nb-percent-3:0;
+    --nb-percent-str-3:'0%';
+    // calcul de la longueur max de la jauge
+    --dasharray-max: calc(2 * var(--pi)* var(--circle-r));
+    // calcul du remplissage de la jauge
+    --dasharray-size: calc(var(--dasharray-max)*var(--nb-percent) / 100 );
+    --dasharray-size-2: calc(var(--dasharray-max)*var(--nb-percent-2) / 100 );
+    --dasharray-size-3: calc(var(--dasharray-max)*var(--nb-percent-3) / 100 );
+    --nb-size: calc(var(--circle-r)*2.3);
+    --alignement:calc(50% - var(--nb-size)/2);
+}
