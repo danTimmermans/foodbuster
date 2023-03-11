@@ -85,7 +85,7 @@ section{
         text-align: center;
     }
 }
-#binCollection, #saveMoney, #enzymes, #plugAndplay{
+#binCollection, #saveMoney, #enzymes, #plugAndplay, #eu-product, #fertilizer, #partners{
      background: linear-gradient(90deg, rgba(212,200,191,1) 6%, rgba(227,220,215,1) 50%, rgba(212,200,191,1) 94%);
 }
 .articleContainer{
@@ -334,6 +334,8 @@ section{
 
     }
 }
-// #analytics{
-
-// }
+#partners{
+    .partner-pic{
+        width: 80%;
+    }
+}
