@@ -1,0 +1,81 @@
+#mainHeader{
+    width: 100%;
+    height: auto;
+    background: rgb(67,94,97);
+    background: radial-gradient(circle, rgba(67,94,97,1) 0%, rgba(213,224,189,1) 0%, rgba(151,175,166,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo_container{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column ;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo_container_home{
+        height: 500px;
+    }
+    .logo_container_about{
+        height: auto;
+    }
+    .logo{
+        width: 100%;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
+    .marquee-rtl {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;                      /* largeur de la fenêtre */
+        margin: 1em auto 2em;
+        overflow: hidden;                     /* masque tout ce qui dépasse */
+        h1{
+            color: color('dark_green');
+        }
+      }    
+    /* le bloc défilant */
+    .marquee-rtl > :first-child {
+        display: inline-block;                /* modèle de boîte en ligne */
+        padding-right: 2em;                   /* un peu d'espace pour la transition */
+        padding-left: 100%;                   /* placement à droite du conteneur */
+        white-space: nowrap;                  /* pas de passage à la ligne */
+        animation: defilement-rtl 15s infinite linear;
+      }
+      @keyframes defilement-rtl {
+        0% {
+          transform: translate3d(0,0,0);      /* position initiale à droite */
+        }
+        100% {
+          transform: translate3d(-100%,0,0);  /* position finale à gauche */
+        }
+      }
+}
+@include media-breakpoint-up("md"){
+    #mainHeader{
+        .logo_container{
+            height: 650px;
+        }
+    }
+}
+@include media-breakpoint-up("lg"){
+    #mainHeader{
+        .logo{
+            width: 90%;
+        }
+        .logo_container{
+            height: 800px;
+        }
+    }
+}
+@include media-breakpoint-up("xl"){
+    #mainHeader{
+        .logo{
+            width: 70%;
+        }
+    }
+}
